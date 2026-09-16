@@ -36,6 +36,25 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
   connect(ui->btnCircle, &QPushButton::clicked, this, &MainWindow::onCircle);
   connect(qnode, &QNode::velocityUpdated, this, &MainWindow::onVelocityUpdated);
 
+  connect(ui->sliderR,     &QSlider::valueChanged, this, &MainWindow::onPenChanged);
+  connect(ui->sliderG,     &QSlider::valueChanged, this, &MainWindow::onPenChanged);
+  connect(ui->sliderB,     &QSlider::valueChanged, this, &MainWindow::onPenChanged);
+  connect(ui->sliderWidth, &QSlider::valueChanged, this, &MainWindow::onPenChanged);
+
+}
+void MainWindow::onPenChanged()
+{
+  int r = ui->sliderR->value();       // 각 슬라이더의 현재 값 읽기
+  int g = ui->sliderG->value();
+  int b = ui->sliderB->value();
+  int w = ui->sliderWidth->value();
+
+  qnode->setPen(r, g, b, w);          // 펜 설정 적용
+
+  // ui->labelR->setText(QString::number(r));
+  // ui->labelG->setText(QString::number(g));
+  // ui->labelB->setText(QString::number(b));
+  // ui->labelWidth->setText(QString::number(w));  
 }
 void MainWindow::keyPressEvent(QKeyEvent* event)
 {

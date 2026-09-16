@@ -15,6 +15,7 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QSlider>
 #include "QIcon"
 #include "qnode.hpp"
 #include "ui_mainwindow.h"
@@ -44,7 +45,8 @@ private slots:
   void onRect();
   void onCircle();
   void onVelocityUpdated(double linear, double angular);
-  
+  void onPenChanged(); //슬라이더 4개 공용
+
 private:
   Ui::MainWindowDesign* ui;
   void closeEvent(QCloseEvent* event);

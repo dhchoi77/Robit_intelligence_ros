@@ -12,8 +12,6 @@
 
 #include "../include/test_ros_qt/qnode.hpp"
 
-#include "../include/test_ros_qt/qnode.hpp"
-
 QNode::QNode()
 {
   int argc = 0;
@@ -26,8 +24,9 @@ QNode::QNode()
     "/turtle1/pose", 10,
     [this](const turtlesim::msg::Pose::SharedPtr msg) {
       current_theta_ = msg->theta;          // 받을 때마다 theta 갱신
-      RCLCPP_INFO(node->get_logger(), "theta: %.2f", current_theta_);
+      
     });
+  pen_client_ = node->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen"); 
   this->start();
 }
 
@@ -64,4 +63,20 @@ void QNode::run()
   }
   rclcpp::shutdown();
   Q_EMIT rosShutDown();
+}
+void QNode::setPen(int r, int g, int b, int width)
+{
+  if (!pen_client_ || !pen_client_->service_is_ready())
+  {
+    return;
+  }
+
+  auto request = std::make_shared<turtlesim::srv::SetPen::Request>();
+  request->r = r;
+  request->g = g;
+  request->b = b;
+  request->width = width;
+  request->off = 0;
+
+  pen_client_->async_send_request(request);
 }

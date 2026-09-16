@@ -20,6 +20,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/twist.hpp>
 #include <turtlesim/msg/pose.hpp>          // ← pose 메시지 타입
+#include <turtlesim/srv/set_pen.hpp>
 #endif
 #include <QThread>
 
@@ -32,6 +33,8 @@ public:
 
   void publishVelocity(double linear, double angular);
   double getTheta();                        // ← 현재 각도 읽기
+  void setPen(int r, int g, int b, int width);
+
 
 protected:
   void run();
@@ -41,6 +44,7 @@ private:
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
   rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr pose_sub_;   // ← 구독자
   double current_theta_ = 0.0;              // ← 최신 theta 저장
+  rclcpp::Client<turtlesim::srv::SetPen>::SharedPtr pen_client_;
 
 Q_SIGNALS:
   void rosShutDown();

@@ -117,9 +117,113 @@
      <rect>
       <x>150</x>
       <y>470</y>
-      <width>561</width>
+      <width>221</width>
       <height>101</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderR">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>490</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderG">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>530</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderB">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>570</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderWidth">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>610</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelR">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>490</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RED</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelG">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>530</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GREEN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelB">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>570</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BLUE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWidth">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>610</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>THICK</string>
     </property>
    </widget>
   </widget>
