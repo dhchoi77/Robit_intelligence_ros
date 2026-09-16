@@ -22,7 +22,12 @@ QNode::QNode()
   node = rclcpp::Node::make_shared("test_ros_qt");
 
   publisher_ = node->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);  // ← 추가
-
+  pose_sub_ = node->create_subscription<turtlesim::msg::Pose>(
+    "/turtle1/pose", 10,
+    [this](const turtlesim::msg::Pose::SharedPtr msg) {
+      current_theta_ = msg->theta;          // 받을 때마다 theta 갱신
+      RCLCPP_INFO(node->get_logger(), "theta: %.2f", current_theta_);
+    });
   this->start();
 }
 
@@ -34,8 +39,13 @@ void QNode::publishVelocity(double linear, double angular)
   msg.linear.x = linear;
   msg.angular.z = angular;
   publisher_->publish(msg);
-}
 
+  Q_EMIT velocityUpdated(linear, angular);   // ← 화면 갱신 신호 발생
+}
+double QNode::getTheta()      // ← 여기, publishVelocity 아래에 추가
+{
+  return current_theta_;
+}
 QNode::~QNode()
 {
   if (rclcpp::ok())

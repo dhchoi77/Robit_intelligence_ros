@@ -15,16 +15,14 @@
 /*****************************************************************************
 ** Includes
 *****************************************************************************/
+
 #ifndef Q_MOC_RUN
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/twist.hpp>
+#include <turtlesim/msg/pose.hpp>          // ← pose 메시지 타입
 #endif
 #include <QThread>
-#include <QString>
 
-/*****************************************************************************
-** Class
-*****************************************************************************/
 class QNode : public QThread
 {
   Q_OBJECT
@@ -33,6 +31,7 @@ public:
   ~QNode();
 
   void publishVelocity(double linear, double angular);
+  double getTheta();                        // ← 현재 각도 읽기
 
 protected:
   void run();
@@ -40,9 +39,12 @@ protected:
 private:
   std::shared_ptr<rclcpp::Node> node;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+  rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr pose_sub_;   // ← 구독자
+  double current_theta_ = 0.0;              // ← 최신 theta 저장
 
 Q_SIGNALS:
   void rosShutDown();
+  void velocityUpdated(double linear, double angular);
 };
 
 #endif /* test_ros_qt_QNODE_HPP_ */

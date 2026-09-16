@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>951</width>
-    <height>704</height>
+    <width>907</width>
+    <height>686</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -110,6 +110,16 @@
     </property>
     <property name="text">
      <string>원</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>470</y>
+      <width>561</width>
+      <height>101</height>
+     </rect>
     </property>
    </widget>
   </widget>
