@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowDesign</class>
+ <widget class="QMainWindow" name="MainWindowDesign">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>907</width>
+    <height>686</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QRosApp</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/images.qrc">
+    <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="Australia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnW">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>40</y>
+      <width>181</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>W</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnS">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>200</y>
+      <width>181</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnA">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>200</y>
+      <width>191</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnD">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>200</y>
+      <width>191</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>D</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTriangle">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>400</y>
+      <width>88</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>삼각형</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRect">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>400</y>
+      <width>88</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>사각형</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCircle">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>400</y>
+      <width>88</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>원</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>470</y>
+      <width>221</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderR">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>490</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderG">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>530</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderB">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>570</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderWidth">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>610</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelR">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>490</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RED</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelG">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>530</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GREEN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelB">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>570</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BLUE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelWidth">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>610</y>
+      <width>66</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>THICK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRecStart">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>30</y>
+      <width>88</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>기록</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRecStop">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>80</y>
+      <width>88</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>정지</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnReplay">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>130</y>
+      <width>88</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>재생</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelStatus">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>80</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>상태</string>
+    </property>
+   </widget>
+  </widget>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="action_Preferences">
+   <property name="text">
+    <string>&amp;Preferences</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowDesign</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
