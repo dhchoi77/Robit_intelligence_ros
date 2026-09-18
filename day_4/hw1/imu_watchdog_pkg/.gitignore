@@ -1,0 +1,4 @@
+build/
+install/
+log/
+*.async_bak
